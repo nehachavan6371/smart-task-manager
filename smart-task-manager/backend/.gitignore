@@ -1,0 +1,14 @@
+target/
+.idea/
+.vscode/
+.classpath
+.project
+.settings/
+*.log
+*.iml
+/.mvn/
+/.idea/
+*.class
+*.jar
+*.war
+.env
