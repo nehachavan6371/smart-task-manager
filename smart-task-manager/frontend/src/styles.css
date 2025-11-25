@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; background:#f6f8fa; margin:0; padding:20px }
+.container { max-width:800px; margin:0 auto; background:#fff; padding:20px; border-radius:6px; box-shadow:0 4px 12px rgba(0,0,0,0.06) }
+input { display:block; padding:8px; margin:8px 0; width:100%; box-sizing:border-box }
+button { padding:8px 12px; margin:8px 0 }
+.task-form { display:flex; gap:8px }
+.task-form input { flex:1 }
