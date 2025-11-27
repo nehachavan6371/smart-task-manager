@@ -1,5 +1,46 @@
 # Smart Task Manager
 
+Lightweight task manager used for coding exercises and demos.
+
+Getting started (dev):
+
+- Requirements: Java 17+, Maven, Node 18+, Docker & Docker Compose
+- Start MySQL via Docker Compose (from `backend`):
+
+  ```zsh
+  cd backend
+  docker-compose up -d mysql
+  ```
+
+- Run backend locally (example env overrides):
+
+  ```zsh
+  SPRING_DATASOURCE_URL=jdbc:mysql://localhost:3307/taskmanager \
+  SPRING_DATASOURCE_USERNAME=user \
+  SPRING_DATASOURCE_PASSWORD=user123 \
+  mvn -DskipTests spring-boot:run
+  ```
+
+- Run frontend:
+
+  ```zsh
+  cd frontend
+  npm install
+  npm start
+  ```
+
+Tests:
+
+- Backend tests use an in-memory H2 DB for quick CI runs: `mvn test`.
+- Frontend tests run with `npm test` (uses Vitest/Vite).
+
+Repository layout:
+- `backend/` — Spring Boot application
+- `frontend/` — React + Vite frontend
+
+License: none specified.
+# Smart Task Manager
+
 Lightweight task manager service (Spring Boot backend + Vite/React frontend). This branch (`feat/admin-seed`) includes JWT auth, RBAC (User/Role), admin seeding via environment variables, audit logging, Dockerfiles, and CI/deploy workflows.
 
 <!-- Badges (add after publishing) -->
