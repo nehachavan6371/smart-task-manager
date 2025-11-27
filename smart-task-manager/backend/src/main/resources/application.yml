@@ -1,16 +1,17 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:smarttask;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
+    url: jdbc:mysql://smarttask-mysql:3306/smarttask
+    username: user
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-
-# If you prefer Postgres in docker-compose, replace datasource with env vars like:
-# spring.datasource.url=jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME}
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
 
 server:
   port: 8080
